@@ -1,10 +1,10 @@
-/* กำหนดสไตล์หลักของ header */
+/* Navbar.css */
 .header {
     position: fixed;
     top: 0;
-    left: 0; 
+    left: 0px;
     right: 0;
-    height: 80px;
+    height: 100px;
     background-color: #333;
     color: white;
     display: flex;
@@ -15,98 +15,51 @@
 }
 
 .logo {
-    display: flex;                   /* จัดเรียงแบบ Flexbox */
-    align-items: center;             /* จัดแนวตั้งกึ่งกลาง */
-    gap: 10px;                       /* ระยะห่างระหว่างโลโก้และข้อความ */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-/* จัดการส่วนโลโก้ */
+
 .logo h1 {
-    margin: 0;                       /* ไม่มีระยะห่างขอบ */
-    font-size: 24px;                 /* ขนาดตัวอักษร */
-    font-weight: bold;               /* ตัวหนา */
-    color: white;                    /* สีตัวอักษรขาว */
-    text-align: left;                /* จัดชิดซ้าย */
-    font-family: 'Arial', sans-serif;/* กำหนดฟอนต์ */
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
 }
 
 .logo-image {
-    font-size: 32px;                /* ขนาดไอคอน */
-    color: white;                   /* สีไอคอน */
-    margin-right: 10px;             /* ระยะห่างจากข้อความ */
+    font-size: 32px;
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
 }
 
 .logo-image:hover {
-    color: #007bff;                /* สีเมื่อชี้ที่ไอคอน */
-    transition: color 0.3s;        /* เอฟเฟกต์การเปลี่ยนสี */
-}
-
-
-/* จัดการส่วนขวาของ header */
-.header-right {
-    display: flex;                   /* จัดเรียงแบบ Flexbox */
-    align-items: center;             /* จัดแนวตั้งกึ่งกลาง */
-    gap: 20px;                       /* ระยะห่างระหว่างองค์ประกอบ */
-}
-
-/* จัดการชื่อผู้ใช้ */
-.user-name {
-    font-size: 16px;                 /* ขนาดตัวอักษร */
-}
-
-/* จัดการปุ่ม Logout */
-.logout-btn {
-    padding: 8px 16px;               /* ระยะห่างภายในปุ่ม */
-    background-color: #555;          /* สีพื้นหลังปุ่ม */
-    color: white;                    /* สีตัวอักษร */
-    border: none;                    /* ไม่มีขอบ */
-    border-radius: 4px;              /* มุมโค้ง */
-    cursor: pointer;                 /* เปลี่ยนเคอร์เซอร์เป็นรูปมือ */
-}
-
-/* เอฟเฟกต์เมื่อชี้ที่ปุ่ม Logout */
-.logout-btn:hover {
-    background-color: #666;          /* สีพื้นหลังเมื่อชี้ */
-}
-
-nav {
-    background-color: #333;
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 20px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    padding: 15px 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
-}
-
-nav a:hover {
     color: #007bff;
 }
 
-/* จัดการไอคอนในเมนู */
-.nav-icon {
-    font-size: 1.5rem;              /* ขนาดไอคอน */
-    margin-right: 10px;              /* ระยะห่างด้านขวา */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* จัดการข้อความในเมนู */
-nav span {
-    font-size: 16px;                /* ขนาดตัวอักษร */
+.user-name {
+    font-size: 16px;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #666;
 }
