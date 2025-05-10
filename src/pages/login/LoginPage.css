@@ -1,0 +1,109 @@
+/* Reset CSS เพื่อให้พื้นหลังเต็มหน้าจอ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;          /* สีพื้นหลังเทาอ่อน */
+}
+
+/* จัดการ container หลักของหน้า login */
+.login-container {
+  display: flex;                      /* จัดเรียงแบบ flex */
+  flex-direction: column;             /* เรียงจากบนลงล่าง */
+  align-items: center;                /* จัดกึ่งกลางแนวนอน */
+  justify-content: center;            /* จัดกึ่งกลางแนวตั้ง */
+  min-height: 100vh;                  /* ความสูงเต็มหน้าจอ */
+  width: 100%;                        /* ความกว้างเต็มหน้าจอ */
+  background-color: #282c34;          /* สีพื้นหลังเทาอ่อน */
+  font-family: 'Arial', sans-serif;   /* ฟอนต์ Arial */
+  padding: 20px;                    /* ระยะห่างขอบด้านใน */
+}
+/* จัดการฟอร์ม login */
+.login-form {
+  background: white;                  /* พื้นหลังสีขาว */
+  padding: 4rem;                      /* ระยะห่างขอบด้านใน */
+  border-radius: 8px;                 /* มุมโค้ง */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* เงา */
+  width: 100%;                        /* ความกว้างเต็ม */
+  max-width: 400px;                   /* ความกว้างสูงสุด */
+}
+.login-button{
+    background-color: #007bff;          /* สีน้ำเงิน */
+    color: white;                       /* สีตัวอักษรขาว */
+    padding: 10px 20px;                 /* ระยะห่างขอบด้านใน */
+    border: none;                       /* ไม่มีเส้นขอบ */
+    border-radius: 4px;                 /* มุมโค้ง */
+    cursor: pointer;                    /* เปลี่ยนเคอร์เซอร์เป็นมือ */
+    width: 100%;                        /* ความกว้างเต็ม */
+    font-size: 16px;                    /* ขนาดตัวอักษร */
+}
+.form-group {
+  margin-bottom: 1.5rem;              /* ระยะห่างด้านล่าง */
+}
+/* จัดการ input fields */
+.form-group input {
+  width: 100%;                        /* ความกว้างเต็ม */
+  padding: 10px;                      /* ระยะห่างขอบด้านใน */
+  border: 1px solid #ddd;             /* เส้นขอบสีเทา */
+  border-radius: 4px;                 /* มุมโค้ง */
+  margin-top: 5px;                    /* ระยะห่างด้านบน */
+}
+/* เอฟเฟกต์เมื่อ hover ที่ลิงก์ */
+.forgot-password:hover {
+  text-decoration: underline;         /* แสดงเส้นใต้เมื่อชี้ */
+}
+/* จัดการ layout สำหรับส่วน Remember me และ Forgot password */
+.remember-forgot {
+  display: flex;                      /* จัดเรียงแนวนอน */
+  justify-content: space-between;     /* กระจายพื้นที่ระหว่างองค์ประกอบ */
+  align-items: center;                /* จัดกึ่งกลางแนวตั้ง */
+  width: 100%;                        /* ความกว้างเต็ม container */
+}
+
+/* จัดการ checkbox และข้อความ Remember me */
+.remember-me {
+  display: flex;                      /* จัดเรียงแนวนอน */
+  align-items: center;                /* จัดกึ่งกลางแนวตั้ง */
+  gap: 0.5rem;                        /* ระยะห่างระหว่าง checkbox และข้อความ */
+}
+
+/* สไตล์ลิงก์ Forgot password */
+.forgot-password {
+  color: #0066cc;                     /* สีน้ำเงิน */
+  text-decoration: none;              /* ลบเส้นใต้ลิงก์ */
+  margin-left: 20px;                  /* ระยะห่างด้านซ้าย */
+}
+
+/* สไตล์สำหรับส่วนเลือกประเภทผู้ใช้ */
+.user-type-selector {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.radio-group label {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* เพิ่มสไตล์เมื่อ hover */
+.radio-group label:hover {
+  cursor: pointer;
+  color: #007bff;
+}

@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Login from './pages/login/LoginPage';
+import HomePage from './pages/home/HomePage';
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
 
 function App() {
+  const ShowNavbarAndHeader = () => {
+    const location = useLocation();
+    return location.pathname !== '/' && location.pathname !== '/login' ?(
+    <>
+      <Navbar /> 
+      <Sidebar />
+    </>
+    ) : null;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <ShowNavbarAndHeader />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/login/" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,101 @@
+/* จัดการ sidebar หลัก */
+.sidebar {
+    background-color: #333;          /* สีพื้นหลังเทาเข้ม */
+    position: fixed;                 /* กำหนดตำแหน่งแบบคงที่ */
+    left: 0;                         /* ชิดขอบซ้าย */
+    top: 60px;                       /* ห่างจากขอบบน 60px */
+    height: calc(100vh - 60px);      /* ความสูงเต็มหน้าจอลบความสูง navbar */
+    width: 200px;                    /* ความกว้างคงที่ */
+    z-index: 999;                    /* ลำดับการซ้อนทับ */
+}
+
+/* จัดการลิงก์ในเมนู */
+.side-links {
+    list-style-type: none;           /* ไม่แสดงสัญลักษณ์หน้ารายการ */
+    margin: 0;                       /* ไม่มีระยะห่างขอบนอก */
+    padding: 20px 0;                 /* ระยะห่างด้านบนและล่าง */
+    display: flex;                   /* จัดเรียงแบบ flex */
+    flex-direction: column;          /* เรียงจากบนลงล่าง */
+}
+
+/* จัดการรายการในเมนู */
+.side-links li {
+    padding: 15px 30px;              /* ระยะห่างภายในรายการ */
+    transition: background-color 0.2s; /* เอฟเฟกต์เปลี่ยนสีพื้นหลัง */
+}
+
+/* เอฟเฟกต์เมื่อชี้ที่รายการ */
+.side-links li:hover {
+    background-color: #444;          /* สีพื้นหลังเมื่อชี้ */
+}
+
+/* จัดการลิงก์ในรายการ */
+.side-links a {
+    color: #fff;                     /* สีตัวอักษรขาว */
+    text-decoration: none;           /* ไม่มีขีดเส้นใต้ */
+    font-size: 16px;                 /* ขนาดตัวอักษร */
+    display: block;                  /* แสดงแบบบล็อก */
+    padding: 5px 0;                  /* ระยะห่างด้านบนและล่าง */
+}
+
+/* ปรับ margin ของ content หลัก */
+.main-content {
+    margin-left: 200px;              /* เว้นระยะจากขอบซ้ายเท่ากับความกว้าง sidebar */
+    margin-top: 60px;                /* เว้นระยะจากขอบบนเท่ากับความสูง navbar */
+    padding: 20px;                   /* ระยะห่างขอบด้านใน */
+}
+
+/* แก้ไข Navbar ให้เริ่มหลัง Sidebar */
+.header {
+    left: 200px;                     /* เริ่มหลังจาก sidebar */
+}
+
+/* ปรับ margin ของ content หลักเพื่อไม่ให้ทับกับ navbar */
+.App {
+    margin-left: 250px;  /* เพิ่ม margin-left แทน margin-right */
+    margin-top: 60px;    /* เพิ่ม margin-top เพื่อไม่ให้ทับกับ Navbar */
+}
+
+/* ลบส่วนที่ซ้ำซ้อน */
+.navbar {
+    display: none;  /* ซ่อน class navbar เดิม */
+}
+
+.nav-brand {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+}
+
+.nav-brand h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.nav-links li {
+    padding: 15px 25px;
+    transition: background-color 0.3s;
+}
+
+.nav-links li:hover {
+    background-color: #444;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
