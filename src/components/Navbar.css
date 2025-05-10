@@ -1,18 +1,19 @@
 /* กำหนดสไตล์หลักของ header */
 .header {
-    position: fixed;                  /* กำหนดตำแหน่งแบบคงที่ */
-    top: 0;                          /* ชิดขอบบน */
-    right: 0;                        /* ชิดขอบขวา */
-    left: 0;                     /* แก้ไขให้เท่ากับความกว้างของ Sidebar */
-    height: 60px;                    /* ลดความสูงลง */
-    background-color: #333;          /* สีพื้นหลังเทาเข้ม */
-    color: white;                    /* สีตัวอักษรขาว */
-    display: flex;                   /* จัดเรียงแบบ Flexbox */
-    justify-content: space-between;  /* จัดวางเนื้อหาให้กระจาย */
-    align-items: center;             /* จัดแนวตั้งกึ่งกลาง */
-    padding: 0 20px;                 /* ระยะห่างซ้าย-ขวา 20px */
-    z-index: 100;                    /* ลำดับชั้นการแสดงผล */
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    height: 80px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
 }
+
 .logo {
     display: flex;                   /* จัดเรียงแบบ Flexbox */
     align-items: center;             /* จัดแนวตั้งกึ่งกลาง */

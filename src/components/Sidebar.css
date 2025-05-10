@@ -1,12 +1,12 @@
 /* จัดการ sidebar หลัก */
 .sidebar {
-    background-color: #333;          /* สีพื้นหลังเทาเข้ม */
-    position: fixed;                 /* กำหนดตำแหน่งแบบคงที่ */
-    left: 0;                         /* ชิดขอบซ้าย */
-    top: 60px;                       /* ห่างจากขอบบน 60px */
-    height: calc(100vh - 60px);      /* ความสูงเต็มหน้าจอลบความสูง navbar */
-    width: 200px;                    /* ความกว้างคงที่ */
-    z-index: 999;                    /* ลำดับการซ้อนทับ */
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 80px; 
+    width: 250px;
+    height: calc(100vh - 80px); 
+    z-index: 99;
 }
 
 /* จัดการลิงก์ในเมนู */
@@ -22,6 +22,7 @@
 .side-links li {
     padding: 15px 30px;              /* ระยะห่างภายในรายการ */
     transition: background-color 0.2s; /* เอฟเฟกต์เปลี่ยนสีพื้นหลัง */
+    
 }
 
 /* เอฟเฟกต์เมื่อชี้ที่รายการ */
@@ -40,14 +41,14 @@
 
 /* ปรับ margin ของ content หลัก */
 .main-content {
-    margin-left: 200px;              /* เว้นระยะจากขอบซ้ายเท่ากับความกว้าง sidebar */
-    margin-top: 60px;                /* เว้นระยะจากขอบบนเท่ากับความสูง navbar */
+    margin-left: 250px;              /* เว้นระยะจากขอบซ้ายเท่ากับความกว้าง sidebar */
+    margin-top: 80px;                /* เว้นระยะจากขอบบนเท่ากับความสูง navbar */
     padding: 20px;                   /* ระยะห่างขอบด้านใน */
 }
 
-/* แก้ไข Navbar ให้เริ่มหลัง Sidebar */
+/* ลบส่วนที่ไม่จำเป็นออก */
 .header {
-    left: 200px;                     /* เริ่มหลังจาก sidebar */
+    left: 250px;                     /* ไม่จำเป็นต้องมีเพราะกำหนดใน Navbar.css แล้ว */
 }
 
 /* ปรับ margin ของ content หลักเพื่อไม่ให้ทับกับ navbar */

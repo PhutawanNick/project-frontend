@@ -1,28 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Login from './pages/login/LoginPage';
-import HomePage from './pages/home/HomePage';
-import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LivePage from './pages/live/LivePage';
+import DashBoard from './pages/dashboard/DashBoardPage';
+import History from './pages/history/HistoryPage';
+import Settings from './pages/setting/SettingPage';
 import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+
 
 function App() {
-  const ShowNavbarAndHeader = () => {
-    const location = useLocation();
-    return location.pathname !== '/' && location.pathname !== '/login' ?(
-    <>
-      <Navbar /> 
-      <Sidebar />
-    </>
-    ) : null;
-  }
-
   return (
     <Router>
       <div className="App">
-        <ShowNavbarAndHeader />
+        <Navbar />
+        <Sidebar />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/login/" element={<Login />} />
+          <Route path="/" element={<DashBoard />} />
+          <Route path="/LivePage" element={<LivePage />} />
+          <Route path="/DashBoard" element={<DashBoard />} />
+          <Route path="/History" element={<History />} />
+          <Route path="/Setting" element={<Settings />} />
         </Routes>
       </div>
     </Router>
