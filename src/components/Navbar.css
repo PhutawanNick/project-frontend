@@ -4,8 +4,8 @@
     top: 0;
     left: 0px;
     right: 0;
-    height: 100px;
-    background-color: #333;
+    height: 80px;
+    background-color: #dd700a;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -52,8 +52,8 @@
 
 .logout-btn {
     padding: 8px 16px;
-    background-color: #555;
-    color: white;
+    background-color: white;
+    color: #dd700a;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -61,5 +61,5 @@
 }
 
 .logout-btn:hover {
-    background-color: #666;
+    background-color: #666666;
 }
