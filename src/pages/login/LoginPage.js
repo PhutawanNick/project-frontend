@@ -9,6 +9,7 @@ function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // ตรวจสอบประเภทผู้ใช้และนำทางไปหน้าที่เหมาะสม
+    
     navigate(userType === 'admin' ? '/admin' : '/home');
   };
 
