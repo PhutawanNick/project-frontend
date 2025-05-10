@@ -1,24 +1,102 @@
+/* คอนเทนเนอร์หลักของหน้า Live */
 .live-container {
-    padding: 20px;
-    margin-left: 250px;
-    margin-top: 80px;
+    display: flex;                   /* จัดเรียงแบบ Flexbox */
+    flex-direction:row ;
+    gap: 20px;                       /* ระยะห่างระหว่างคอนเทนเนอร์ */
+    padding: 20px;                   /* ระยะห่างขอบด้านใน */
+    margin-left: 0px;               /* ระยะห่างจากขอบซ้าย */
+    margin-top: 0px;                /* ระยะห่างจากขอบบน */
+    margin-right: 0px;              /* ระยะห่างจากขอบขวา */
 }
 
+/* คอนเทนเนอร์สำหรับวิดีโอ */
 .video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;                   /* จัดเรียงแบบ Flexbox */
+    flex-direction: column;          /* จัดเรียงแนวตั้ง */
+    justify-content: center;         /* จัดกึ่งกลางแนวตั้ง */
+    align-items: left;               /* จัดชิดซ้าย */
+    margin: 20px 0;                  /* ระยะห่างบนล่าง */
+    padding: 20px;                   /* ระยะห่างขอบด้านใน */
+    background-color: #34495e;       /* สีพื้นหลัง */
+    border-radius: 8px;              /* มุมโค้ง */
+    box-shadow: 0 2px 4px white;     /* เงา */
+    color: white;                    /* สีตัวอักษร */
+    width: auto;                     /* ความกว้างอัตโนมัติ */
+    height: auto;                    /* ความสูงอัตโนมัติ */
 }
 
+/* กรอบวิดีโอ */
 .video-frame {
-    width: 800px;
-    height: auto;
-    border: 3px solid #333;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 500px;                    /* ความกว้างคงที่ */
+    height: auto;                    /* ความสูงปรับตามสัดส่วน */
+    border: 1px solid white;          /* เส้นขอบ */
+    border-radius: 4px;              /* มุมโค้ง */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* เงา */
+}
+
+/* คอนเทนเนอร์สำหรับข้อมูลการตรวจจับ */
+.detection-container {
+    display: flex;                   /* จัดเรียงแบบ Flexbox */
+    flex-direction: column;          /* จัดเรียงแนวตั้ง */
+    gap: 15px;                       /* ระยะห่างระหว่างกล่อง */
+    width: 300px;                    /* ความกว้างคงที่ */
+}
+
+/* กล่องแสดงข้อมูลการตรวจจับ */
+.detection-box {
+    background-color: #34495e;       /* สีพื้นหลัง */
+    padding: 15px;                   /* ระยะห่างขอบด้านใน */
+    border-radius: 8px;              /* มุมโค้ง */
+    color: white;                    /* สีตัวอักษร */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* เงา */
+}
+
+/* หัวข้อในกล่องข้อมูล */
+.detection-box h3 {
+    margin: 0 0 10px 0;              /* ระยะห่างด้านล่าง */
+    font-size: 16px;                 /* ขนาดตัวอักษร */
+    color: #3498db;                  /* สีตัวอักษร */
+}
+
+/* จำนวนการตรวจจับ */
+.detection-count {
+    font-size: 24px;                 /* ขนาดตัวอักษร */
+    font-weight: bold;               /* ตัวหนา */
+    color: #e74c3c;                  /* สีตัวอักษร */
+}
+
+/* เลขทะเบียน */
+.plate-number {
+    font-size: 20px;                 /* ขนาดตัวอักษร */
+    font-weight: bold;               /* ตัวหนา */
+    letter-spacing: 1px;             /* ระยะห่างตัวอักษร */
+}
+
+/* สถานะการตรวจจับ */
+.status-indicator {
+    padding: 5px 10px;               /* ระยะห่างขอบด้านใน */
+    border-radius: 4px;              /* มุมโค้ง */
+    font-weight: bold;               /* ตัวหนา */
+    text-align: center;              /* จัดกึ่งกลาง */
+}
+
+/* สถานะ Active */
+.status-indicator.active {
+    background-color: #2ecc71;       /* สีพื้นหลังเมื่อ Active */
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #465c71;
+    font-size: 14px;
+}
+
+.events-list li:last-child {
+    border-bottom: none;
 }
