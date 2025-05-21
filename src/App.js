@@ -6,6 +6,7 @@ import History from './pages/history/HistoryPage';
 import Settings from './pages/setting/SettingPage';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/Setting" element={<Settings />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
