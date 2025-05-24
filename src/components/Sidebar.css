@@ -75,3 +75,87 @@
     padding: 20px;
     background-color: #f8f9fa;
 }
+
+/* Floating Menu */
+.floating-menu {
+  position: fixed;
+  top: 90px;  /* เปลี่ยนเป็น 90px เพื่อให้อยู่ใต้ Navbar ที่มีความสูง 80px + margin 10px */
+  left: 20px;
+  z-index: 998;  /* ลดค่า z-index ให้น้อยกว่า Navbar (999) */
+}
+
+.menu-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #2c3e50;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+}
+
+.menu-items {
+  position: absolute;
+  top: 70px;  /* เปลี่ยนจาก bottom เป็น top */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(-20px);  /* เปลี่ยนทิศทางการเลื่อน */
+}
+
+.menu-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #34495e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.1);
+  background-color: #dd700a;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: white;
+  transition: color 0.3s;
+}
+
+/* เมื่อเมนูเปิด */
+.floating-menu.open .menu-items {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-menu.open .menu-button {
+  background-color: #dd700a;
+}
+
+/* ปรับการแสดงผลบนมือถือ */
+@media (max-width: 768px) {
+  .floating-menu {
+    top: 90px;  /* ปรับตำแหน่งให้อยู่ใต้ Navbar เช่นกัน */
+    left: 10px;
+  }
+}
