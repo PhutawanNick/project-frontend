@@ -1,17 +1,17 @@
 /* App.css */
 
 .App {
-  margin-left: 250px;   /* เว้นด้านซ้ายตาม sidebar */
-  margin-top: 80px;     /* เว้นด้านบนตาม navbar */
+  margin-left: 0;   /* ลบ margin-left เดิมออก */
+  margin-top: 0;    /* ลบ margin-top เดิมออก */
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #34495e;
   min-height: 100vh;
 }
 
 /* เนื้อหาแต่ละหน้า */
 .main-content {
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 0;  /* ลบ padding เดิมออก */
+  background-color: #34495e;
 }
 
 /* ยกเลิกสไตล์เก่าที่ไม่ใช้แล้ว */

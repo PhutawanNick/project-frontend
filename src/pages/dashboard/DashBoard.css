@@ -1,7 +1,8 @@
 .dashboard-container {
   padding: 20px;
-  margin-left: 20px;
+  padding-left: 110px;
   margin-top: 20px;
+  background-color: #cbcbcb; /* เปลี่ยนสีพื้นหลังให้เข้ากับ theme */
 }
 
 .dashboard-header {

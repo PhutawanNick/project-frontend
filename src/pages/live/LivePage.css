@@ -1,37 +1,42 @@
 /* คอนเทนเนอร์หลักของหน้า Live */
 .live-container {
     display: flex;                   /* จัดเรียงแบบ Flexbox */
-    flex-direction:row ;
+    flex-direction: row;
     gap: 20px;                       /* ระยะห่างระหว่างคอนเทนเนอร์ */
     padding: 20px;                   /* ระยะห่างขอบด้านใน */
-    margin-left: 0px;               /* ระยะห่างจากขอบซ้าย */
-    margin-top: 0px;                /* ระยะห่างจากขอบบน */
-    margin-right: 0px;              /* ระยะห่างจากขอบขวา */
+    padding-left: 110px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
+    margin-top: 80px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
+    height: calc(100vh - 160px);    /* ปรับความสูงให้เหมาะสม */
+    background-color: #cbcbcb;       /* เปลี่ยนสีพื้นหลังให้เข้ากับ theme */
+}
+
+/* ส่วนหัวของหน้า Live */
+.live-header {
+    background-color: #00ff00;      /* สีพื้นหลัง */
+    color: white;                    /* สีตัวอักษร */
+    padding: 10px 20px;              /* ระยะห่างขอบด้านใน */
+    border-radius: 5px;              /* มุมโค้ง */
+    font-weight: bold;               /* ตัวหนา */
+    font-size: 18px;                 /* ขนาดตัวอักษร */
+}
+
+/* video section styles */
+.video-section {
+    flex: 1;                        /* ให้ขยายเต็มพื้นที่ที่เหลือ */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* คอนเทนเนอร์สำหรับวิดีโอ */
 .video-container {
-    display: flex;                   /* จัดเรียงแบบ Flexbox */
-    flex-direction: column;          /* จัดเรียงแนวตั้ง */
-    justify-content: center;         /* จัดกึ่งกลางแนวตั้ง */
-    align-items: left;               /* จัดชิดซ้าย */
-    margin: 20px 0;                  /* ระยะห่างบนล่าง */
-    padding: 20px;                   /* ระยะห่างขอบด้านใน */
-    background-color: #34495e;       /* สีพื้นหลัง */
-    border-radius: 8px;              /* มุมโค้ง */
-    box-shadow: 0 2px 4px white;     /* เงา */
-    color: white;                    /* สีตัวอักษร */
-    width: auto;                     /* ความกว้างอัตโนมัติ */
-    height: auto;                    /* ความสูงอัตโนมัติ */
-}
-
-/* กรอบวิดีโอ */
-.video-frame {
-    width: 500px;                    /* ความกว้างคงที่ */
-    height: auto;                    /* ความสูงปรับตามสัดส่วน */
-    border: 1px solid white;          /* เส้นขอบ */
-    border-radius: 4px;              /* มุมโค้ง */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* เงา */
+    flex: 1;
+    background-color: #2c3e50;    /* ปรับสีพื้นหลังให้เข้ากัน */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* คอนเทนเนอร์สำหรับข้อมูลการตรวจจับ */
@@ -40,6 +45,21 @@
     flex-direction: column;          /* จัดเรียงแนวตั้ง */
     gap: 15px;                       /* ระยะห่างระหว่างกล่อง */
     width: 300px;                    /* ความกว้างคงที่ */
+}
+
+/* info section styles */
+.info-section {
+    width: 300px;                   /* กำหนดความกว้างคงที่ */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    background-color: #2c3e50;    /* ปรับสีพื้นหลังให้เข้ากัน */
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
 }
 
 /* กล่องแสดงข้อมูลการตรวจจับ */
@@ -54,8 +74,10 @@
 /* หัวข้อในกล่องข้อมูล */
 .detection-box h3 {
     margin: 0 0 10px 0;              /* ระยะห่างด้านล่าง */
+    padding: 10px;                   /* ระยะห่างขอบด้านใน */
     font-size: 16px;                 /* ขนาดตัวอักษร */
-    color: #3498db;                  /* สีตัวอักษร */
+    color: white;                    /* สีตัวอักษร */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* เส้นขอบด้านล่าง */
 }
 
 /* จำนวนการตรวจจับ */
@@ -89,6 +111,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: 10px;
 }
 
 .events-list li {
@@ -99,4 +122,23 @@
 
 .events-list li:last-child {
     border-bottom: none;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .live-container {
+        margin-left: 60px;          /* ลด margin บนหน้าจอขนาดเล็ก */
+        margin-top: 80px;          /* รักษา margin-top ในหน้าจอขนาดเล็ก */
+        flex-direction: column;
+    }
+
+    .info-section {
+        width: 100%;
+    }
+}
+
+.plate-info, .helmet-info, .no-helmet-info {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
 }

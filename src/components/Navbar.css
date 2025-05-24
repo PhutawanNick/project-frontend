@@ -2,7 +2,7 @@
 .header {
     position: fixed;
     top: 0;
-    left: 0px;
+    left: 0;
     right: 0;
     height: 80px;
     background-color: #34495e;
@@ -22,22 +22,22 @@
 
 .logo h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: white;
-    text-align: left;
     font-family: 'Arial', sans-serif;
 }
 
+.logo h1:hover,
+.logo-image:hover {
+    color: #dd700a;
+}
+
 .logo-image {
-    font-size: 32px;
+    font-size: 50px;
     color: white;
     margin-right: 10px;
     transition: color 0.3s;
-}
-
-.logo-image:hover {
-    color: #007bff;
 }
 
 .header-right {
@@ -47,13 +47,15 @@
 }
 
 .user-name {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .logout-btn {
     padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
     background-color: white;
-    color: #dd700a;
+    color: #34495e;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -61,5 +63,6 @@
 }
 
 .logout-btn:hover {
-    background-color: #34495e;
+    background-color: #dd700a;
+    color: white;
 }

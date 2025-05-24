@@ -1,5 +1,6 @@
 // App.js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/login/LoginPage';
 import LivePage from './pages/live/LivePage';
 import DashBoard from './pages/dashboard/DashBoardPage';
 import History from './pages/history/HistoryPage';
@@ -16,6 +17,8 @@ function App() {
         <Sidebar />
         <main className="main-content">
           <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            {/* เพิ่มเส้นทางสำหรับหน้าอื่น ๆ */}
             <Route path="/" element={<DashBoard />} />
             <Route path="/LivePage" element={<LivePage />} />
             <Route path="/DashBoard" element={<DashBoard />} />
