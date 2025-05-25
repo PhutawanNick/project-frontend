@@ -44,13 +44,8 @@
     height: 580px;
 }
 
-/* คอนเทนเนอร์สำหรับข้อมูลการตรวจจับ */
-.detection-container {
-    display: flex;                   /* จัดเรียงแบบ Flexbox */
-    flex-direction: column;          /* จัดเรียงแนวตั้ง */
-    gap: 15px;                       /* ระยะห่างระหว่างกล่อง */
-    width: 300px;                    /* ความกว้างคงที่ */
-}
+
+
 
 /* info section styles */
 .info-section {
@@ -60,21 +55,23 @@
     gap: 20px;
 }
 
-.info-box {
+.info-box ,.logo-images {
     background-color: #2c3e50;    /* ปรับสีพื้นหลังให้เข้ากัน */
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom: 0%;
+    position: relative;             /* เพื่อให้สามารถใช้ position:absolute กับลูกได้ */
+    display: row;
+    flex-direction: column;         /* จัดเรียงแบบคอลัมน์ */
+    align-items: center;            /* จัดกึ่งกลางแนวนอน */
+    justify-content: center;        /* จัดกึ่งกลางแนวตั้ง */
+    height: 100%;                   /* ให้เต็มความสูงของคอนเทนเนอร์ */
+    overflow: hidden;               /* ซ่อนเนื้อหาที่เกิน */
+    display: flex;                  /* ใช้ Flexbox */
 }
 
-/* กล่องแสดงข้อมูลการตรวจจับ */
-.detection-box {
-    background-color: #34495e;       /* สีพื้นหลัง */
-    padding: 15px;                   /* ระยะห่างขอบด้านใน */
-    border-radius: 8px;              /* มุมโค้ง */
-    color: white;                    /* สีตัวอักษร */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* เงา */
-}
 
 /* หัวข้อในกล่องข้อมูล */
 .detection-box h3 {

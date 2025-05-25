@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LivePage.css';
+import logo from '../../assets/images/2กม กรงเทพฯ 8027.jpg'; // นำเข้าโลโก้จาก assets
 
 
 function LivePage() {
+  const [plateData,setPlateData]=useState({
+    plate:""
+  });
+
   return (
     <div className="live-container">
       <div className="video-section">
@@ -18,19 +23,19 @@ function LivePage() {
 
       <div className="info-section">
         <div className="info-box">
-          <h3>Recent Events</h3>
+          <h3>License Plate picture</h3>
+          <img src={logo} alt="Logo" className="logo-images" />
           <div className="events-list">
             {/* Event items will go here */}
           </div>
         </div>
 
         <div className="info-box">
-          <h3>License Plate</h3>
+          <h3>License plate character</h3>
           <div className="plate-info">
-            {/* License plate info will go here */}
+            {plateData.plate || "No plate detected"}
           </div>
         </div>
-
         <div className="info-box">
           <h3>Helmet Detected</h3>
           <div className="helmet-info">
