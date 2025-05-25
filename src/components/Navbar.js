@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import logo from '../assets/images/helmet.png'; // นำเข้าโลโก้จาก assets
-import { GiFullMotorcycleHelmet } from 'react-icons/gi';
+import logo from '../assets/images/ms-icon-48x48.png'; // นำเข้าโลโก้จาก assets
 import './Navbar.css';
 
 /**
@@ -14,8 +13,7 @@ const Navbar = () => {
     <header className="header">
       {/* ส่วนแสดงโลโก้ด้านซ้าย */}
       <div className="logo">
-        {/* <img src={logo} alt="Logo" className="logo-image" /> */}
-        <GiFullMotorcycleHelmet className="logo-image" />
+        <img src={logo} alt="Logo" className="logo-image" />
         <h1>Helmet & Rider Detection System</h1>
       </div>
       

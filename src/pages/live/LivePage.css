@@ -4,10 +4,9 @@
     flex-direction: row;
     gap: 20px;                       /* ระยะห่างระหว่างคอนเทนเนอร์ */
     padding: 20px;                   /* ระยะห่างขอบด้านใน */
-    padding-left: 80px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
-    margin-top: 60px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
-    margin-bottom: 60px;            /* เพิ่ม margin-bottom สำหรับ Footer */
- /* เปลี่ยนจาก height เป็น min-height */
+    padding-left: 68px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
+    margin-top: 50px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
+    margin-right: -80px;
     background-color: #34495e;
 }
 
@@ -19,6 +18,7 @@
     border-radius: 5px;              /* มุมโค้ง */
     font-weight: bold;               /* ตัวหนา */
     font-size: 18px;                 /* ขนาดตัวอักษร */
+    text-align: center;              /* จัดกึ่งกลาง */
 }
 
 /* video section styles */
@@ -38,11 +38,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 .video-frame {
-    width: 1350px;
-    height: 640px;
+    width: 1080px;
+    height: 580px;
 }
 
 /* คอนเทนเนอร์สำหรับข้อมูลการตรวจจับ */
