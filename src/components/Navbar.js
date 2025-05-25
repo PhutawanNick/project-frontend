@@ -21,7 +21,7 @@ const Navbar = () => {
       {/* ส่วนขวาที่แสดงชื่อผู้ใช้และปุ่ม logout */}
       <div className="header-right">
         {/* แสดงชื่อผู้ใช้ */}
-        <span className="user-name">User Name</span>
+        <span className="user-name">P</span>
         {/* ปุ่มสำหรับออกจากระบบ */}
         <button className="logout-btn">Logout</button>
       </div>

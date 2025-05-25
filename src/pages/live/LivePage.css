@@ -6,8 +6,10 @@
     padding: 20px;                   /* ระยะห่างขอบด้านใน */
     padding-left: 68px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
     margin-top: 50px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
-    margin-right: -80px;
+    margin-right: 0; /* ลบ margin-right ที่เป็นลบออก */
     background-color: #34495e;
+    max-width: 100vw; /* จำกัดความกว้างไม่ให้เกินหน้าจอ */
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
 }
 
 /* ส่วนหัวของหน้า Live */
@@ -18,7 +20,53 @@
     border-radius: 5px;              /* มุมโค้ง */
     font-weight: bold;               /* ตัวหนา */
     font-size: 18px;                 /* ขนาดตัวอักษร */
-    text-align: center;              /* จัดกึ่งกลาง */
+    text-align: center;              /* จัดกึ่งกลาง */    /* คอนเทนเนอร์หลักของหน้า Live */
+    .live-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+        padding-left: 68px;
+        margin-top: 50px;
+        margin-right: 0; /* ลบ margin-right ที่เป็นลบออก */
+        background-color: #34495e;
+        max-width: 100vw; /* จำกัดความกว้างไม่ให้เกินหน้าจอ */
+        overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+    }
+    
+    /* ปรับขนาดวิดีโอให้ยืดหยุ่น */
+    .video-frame {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ทำให้ภาพเต็มพื้นที่และคงสัดส่วน */
+        max-width: 100%; /* จำกัดความกว้างสูงสุด */
+    }
+    
+    /* ปรับขนาด info section */
+    .info-section {
+        width: 300px;
+        min-width: 300px; /* กำหนดความกว้างขั้นต่ำ */
+        margin-right: 10px; /* เพิ่มระยะห่างด้านขวา */
+    }
+    
+    /* Media query สำหรับหน้าจอขนาดเล็ก */
+    @media (max-width: 768px) {
+        .live-container {
+            flex-direction: column;
+            padding: 10px;
+            padding-left: 60px;
+        }
+    
+        .info-section {
+            width: 100%;
+            min-width: auto;
+            margin-right: 0;
+        }
+    
+        .video-frame {
+            height: 50vh; /* ปรับความสูงให้เหมาะสมกับหน้าจอมือถือ */
+        }
+    }
 }
 
 /* video section styles */
