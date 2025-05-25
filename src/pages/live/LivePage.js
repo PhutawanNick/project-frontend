@@ -1,6 +1,7 @@
 import React from 'react';
 import './LivePage.css';
 
+
 function LivePage() {
   return (
     <div className="live-container">
