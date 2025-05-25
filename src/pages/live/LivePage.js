@@ -4,7 +4,7 @@ import logo from '../../assets/images/2กม กรงเทพฯ 8027.jpg'; /
 
 
 function LivePage() {
-  const [plateData,setPlateData]=useState({
+  const [plateData]=useState({
     plate:""
   });
 
