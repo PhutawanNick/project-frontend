@@ -1,23 +1,25 @@
 .dashboard-container {
-  padding-top: 100px;
   padding: 20px;
-  padding-left: 110px;
-  margin-top: 20px;
-  background-color: #cbcbcb; /* เปลี่ยนสีพื้นหลังให้เข้ากับ theme */
+  padding-left: 68px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  background-color: #34495e; /* เปลี่ยนสีพื้นหลังให้เข้ากับ theme */
+  gap: 10px;
 }
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .stat-card {
@@ -37,8 +39,8 @@
 .charts-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .chart-box {
