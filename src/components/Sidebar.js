@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdLiveTv } from 'react-icons/md';
 import { RiDashboardLine } from 'react-icons/ri';
-import { FaHistory } from 'react-icons/fa';
+import { FaHistory, FaUsers } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
+import { useAuth } from '../context/auth';
 import './Sidebar.css';
 
 /**
@@ -12,6 +13,7 @@ import './Sidebar.css';
  */
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { user } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -36,6 +38,11 @@ function Sidebar() {
         <Link to="/Setting" className="menu-item"title="Settings">
           <IoSettingsOutline className="nav-icon"/>
         </Link>
+        {user?.role === 'admin' && (
+          <Link to="/management" className="menu-item" title="Management">
+            <FaUsers className="nav-icon" />
+          </Link>
+        )}
       </nav>
     </div>
   );

@@ -86,3 +86,36 @@
 .footer {
     z-index: 998;   /* ให้ Footer อยู่ใต้ Sidebar */
 }
+
+/* SweetAlert2 Custom Styles */
+.swal2-popup {
+  font-family: 'Kanit', sans-serif;
+  border-radius: 10px;
+}
+
+.swal2-title {
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.swal2-html-container {
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+.swal2-confirm {
+  background-color: #0d81ed !important;
+  font-size: 1.1rem !important;
+  padding: 10px 24px !important;
+}
+
+.swal2-cancel {
+  background-color: #dc3545 !important;
+  font-size: 1.1rem !important;
+  padding: 10px 24px !important;
+}
+
+.swal2-confirm:focus,
+.swal2-cancel:focus {
+  box-shadow: none !important;
+}

@@ -1,6 +1,8 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-import logo from '../assets/images/ms-icon-48x48.png'; // นำเข้าโลโก้จาก assets
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/auth';
+import Swal from 'sweetalert2';
+import logo from '../assets/images/ms-icon-48x48.png';
 import './Navbar.css';
 
 /**
@@ -8,6 +10,35 @@ import './Navbar.css';
  * @returns {JSX.Element} แถบนำทางที่มีโลโก้และปุ่ม logout
  */
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    Swal.fire({
+      title: 'Confirm logout',
+      text: "Do you want to log out?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logout();
+        Swal.fire({
+          title: 'ออกจากระบบสำเร็จ',
+          text: 'คุณได้ออกจากระบบแล้ว',
+          icon: 'success',
+          timer: 1500,
+          showConfirmButton: false
+        }).then(() => {
+          navigate('/');
+        });
+      }
+    });
+  };
+
   return (
     // ส่วนหัวของเว็บไซต์
     <header className="header">
@@ -23,7 +54,9 @@ const Navbar = () => {
         {/* แสดงชื่อผู้ใช้ */}
         <span className="user-name">P</span>
         {/* ปุ่มสำหรับออกจากระบบ */}
-        <button className="logout-btn">Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
     </header>
   );
