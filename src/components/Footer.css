@@ -1,35 +1,32 @@
 .footer {
-  background-color: #34495e;
+  background-color: #58a2e7;
   color: white;  
   width: 100%;     /* กำหนดความกว้างเต็มหน้าจอ */
   z-index: 998;
   padding: 10px 0; /* ลดขนาด padding */
   flex: 1;
+  height: 100px;
+  margin-bottom: -60px;
 }
 
 .footer-content {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
+  margin-top: 30px;
 }
 
 .footer-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
+  color: white;
 }
 .left-text{
   text-align: left;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
   letter-spacing: 1px;
   margin-left: 0px;
 }
@@ -37,17 +34,16 @@
 .center-text {
   text-align: center;
   flex-grow: 1;
-  margin: 0 20px;
   color : white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
 }
 
 .right-text {
   text-align: right;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 

@@ -26,7 +26,7 @@ function DashBoard() {
         </div>
         <div className="stat-card">
           <h3>Active Cameras</h3>
-          <div className="stat-number">8</div>
+          <div className="stat-number">2</div>
         </div>
       </div>
 
