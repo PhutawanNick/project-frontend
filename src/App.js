@@ -15,11 +15,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {/* Public routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
-
-          {/* Protected routes */}
           <Route
             path="/*"
             element={
@@ -33,8 +30,8 @@ function App() {
                     <Route path="/history" element={<History />} />
                     <Route path="/setting" element={<Settings />} />
                   </Routes>
+                  <Footer />
                 </main>
-                <Footer />
               </>
             }
           />

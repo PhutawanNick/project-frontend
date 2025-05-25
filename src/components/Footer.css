@@ -1,11 +1,10 @@
 .footer {
   background-color: #34495e;
-  color: white;
-  position: relative;  /* เปลี่ยนเป็น fixed */
-  bottom: 0;       /* กำหนดให้อยู่ด้านล่างสุด */
+  color: white;  
   width: 100%;     /* กำหนดความกว้างเต็มหน้าจอ */
   z-index: 998;
   padding: 10px 0; /* ลดขนาด padding */
+  flex: 1;
 }
 
 .footer-content {

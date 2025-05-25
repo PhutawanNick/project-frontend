@@ -1,17 +1,17 @@
 /* App.css */
-
 .App {
-  margin-left: 0;   /* ลบ margin-left เดิมออก */
-  margin-top: 0;    /* ลบ margin-top เดิมออก */
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #34495e;
-  min-height: 100vh;
 }
 
 /* เนื้อหาแต่ละหน้า */
 .main-content {
   padding: 0;  /* ลบ padding เดิมออก */
   background-color: #34495e;
+  min-height: calc(100vh - 50px); /* ปรับความสูงให้เต็มหน้าจอ */
 }
 
 /* ยกเลิกสไตล์เก่าที่ไม่ใช้แล้ว */
