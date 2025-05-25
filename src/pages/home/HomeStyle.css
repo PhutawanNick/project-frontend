@@ -40,10 +40,16 @@
 
 .form-group input {
   width: 100%;
-  padding: 0.75rem;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.form-group input:focus {
+  border-color: #0d81ed;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(13,129,237,0.25);
 }
 
 .form-options {
@@ -72,4 +78,22 @@
 
 .login-button:hover {
   background-color: #0056b3;
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-note {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.login-note p {
+  margin: 5px 0;
 }
