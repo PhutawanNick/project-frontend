@@ -5,6 +5,7 @@ import LivePage from './pages/live/LivePage';
 import DashBoard from './pages/dashboard/DashBoardPage';
 import History from './pages/history/HistoryPage';
 import Settings from './pages/setting/SettingPage';
+import HomePage from './pages/home/HomePage';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
@@ -13,20 +14,31 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Sidebar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            {/* เพิ่มเส้นทางสำหรับหน้าอื่น ๆ */}
-            <Route path="/" element={<DashBoard />} />
-            <Route path="/LivePage" element={<LivePage />} />
-            <Route path="/DashBoard" element={<DashBoard />} />
-            <Route path="/History" element={<History />} />
-            <Route path="/Setting" element={<Settings />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Routes>
+          {/* Public routes */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+
+          {/* Protected routes */}
+          <Route
+            path="/*"
+            element={
+              <>
+                <Navbar />
+                <Sidebar />
+                <main className="main-content">
+                  <Routes>
+                    <Route path="/dashboard" element={<DashBoard />} />
+                    <Route path="/livepage" element={<LivePage />} />
+                    <Route path="/history" element={<History />} />
+                    <Route path="/setting" element={<Settings />} />
+                  </Routes>
+                </main>
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
       </div>
     </Router>
   );
