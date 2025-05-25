@@ -3,6 +3,8 @@ import './LivePage.css';
 import fallbackImage from '../../assets/images/2กม กรงเทพฯ 8027.jpg';
 
 function LivePage() {
+  const [plateData]=useState({
+    plate:""
   const [plateData, setPlateData] = useState({
     plate: '',
     image: '',
