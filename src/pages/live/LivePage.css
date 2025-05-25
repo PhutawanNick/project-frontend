@@ -1,13 +1,14 @@
 /* คอนเทนเนอร์หลักของหน้า Live */
 .live-container {
-    display: flex;                   /* จัดเรียงแบบ Flexbox */
+    display: flex;                    /* จัดเรียงแบบ Flexbox */
     flex-direction: row;
     gap: 20px;                       /* ระยะห่างระหว่างคอนเทนเนอร์ */
     padding: 20px;                   /* ระยะห่างขอบด้านใน */
-    padding-left: 110px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
-    margin-top: 80px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
-    height: calc(100vh - 160px);    /* ปรับความสูงให้เหมาะสม */
-    background-color: #cbcbcb;       /* เปลี่ยนสีพื้นหลังให้เข้ากับ theme */
+    padding-left: 80px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
+    margin-top: 60px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
+    margin-bottom: 60px;            /* เพิ่ม margin-bottom สำหรับ Footer */
+ /* เปลี่ยนจาก height เป็น min-height */
+    background-color: #34495e;
 }
 
 /* ส่วนหัวของหน้า Live */
@@ -146,4 +147,10 @@
   padding: 10px;
   text-align: center;
   font-size: 18px;
+}
+
+/* เพิ่มสไตล์สำหรับ main content */
+.main-content {
+    position: relative;
+    padding-bottom: 60px; /* เว้นพื้นที่สำหรับ Footer */
 }

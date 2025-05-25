@@ -4,14 +4,14 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 80px;
-    background-color: #34495e;
+    height: 60px;
+    background-color: #1a3b59;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    z-index: 999;
+    z-index: 1000;  /* ให้ Navbar อยู่บนสุด */
 }
 
 .logo {
@@ -22,7 +22,7 @@
 
 .logo h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     font-family: 'Arial', sans-serif;
@@ -34,7 +34,7 @@
 }
 
 .logo-image {
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     margin-right: 10px;
     transition: color 0.3s;
@@ -65,4 +65,14 @@
 .logout-btn:hover {
     background-color: #dd700a;
     color: white;
+}
+
+/* filepath: c:\WebProject\myproject\src\components\Sidebar.css */
+.floating-menu {
+    z-index: 999;   /* ให้ Sidebar อยู่ใต้ Navbar */
+}
+
+/* filepath: c:\WebProject\myproject\src\components\Footer.css */
+.footer {
+    z-index: 998;   /* ให้ Footer อยู่ใต้ Sidebar */
 }
