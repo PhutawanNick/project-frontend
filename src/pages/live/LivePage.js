@@ -16,7 +16,7 @@ function LivePage() {
     const fetchPlateData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:8000/plate');
+        const response = await axios.get('http://localhost:8001/plate');
         setPlateData(response.data);
         setError(null);
       } catch (err) {
@@ -59,9 +59,15 @@ function LivePage() {
             <div className="error">{error}</div>
           ) : (
             <img 
-              src={plateData.plateImage} 
-              alt="License plate" 
-              className="plate-image" 
+              src={
+                plateData.plateImage
+                  ? plateData.plateImage.startsWith('http')
+                    ? plateData.plateImage
+                    : `data:image/jpeg;base64,${plateData.plateImage}`
+                  : ""
+              }
+              alt="License plate"
+              className="plate-image"
             />
           )}
         </div>
@@ -74,7 +80,7 @@ function LivePage() {
             ) : error ? (
               <div className="error">{error}</div>
             ) : (
-              plateData.plate || "No plate detected"
+              <div className="plate-data">{plateData.plate || "No plate detected"}</div>
             )}
           </div>
         </div>
