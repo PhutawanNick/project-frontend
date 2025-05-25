@@ -1,55 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './LivePage.css';
-import logo from '../../assets/images/2กม กรงเทพฯ 8027.jpg'; // นำเข้าโลโก้จาก assets
-
+import fallbackImage from '../../assets/images/2กม กรงเทพฯ 8027.jpg';
 
 function LivePage() {
-  const [plateData,setPlateData]=useState({
-    plate:""
+  const [plateData, setPlateData] = useState({
+    plate: '',
+    image: '',
+    timestamp: ''
+
   });
+
+  useEffect(() => {
+    const fetchPlateData = async () => {
+      try {
+        const response = await fetch('http://localhost:8001/plate');
+        const data = await response.json();
+        setPlateData({
+          plate: data.plate || '',
+          image: data.image || '',
+          timestamp: data.timestamp || ''
+        });
+      } catch (error) {
+        console.error('Error fetching plate data:', error);
+        setPlateData({ plate: '', image: '' });
+      }
+    };
+
+    fetchPlateData();
+    const intervalId = setInterval(fetchPlateData, 2000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="live-container">
-      <div className="video-section">
-        <div className="live-header">Live Monitor</div>
+      <section className="video-section">
+        <h2 className="live-header">Live Monitor</h2>
         <div className="video-container">
           <img
-            src="https://thumb.photo-ac.com/9f/9fdb5d142ef667cf9d32735308eb281e_t.jpeg"
-            alt="live"
+            src="http://localhost:8000/video_feed"
+            alt="Live Stream"
             className="video-frame"
           />
         </div>
-      </div>
+      </section>
 
-      <div className="info-section">
+      <section className="info-section">
         <div className="info-box">
-          <h3>License Plate picture</h3>
-          <img src={logo} alt="Logo" className="logo-images" />
-          <div className="events-list">
-            {/* Event items will go here */}
-          </div>
+          <h3>License Plate Picture</h3>
+          <img
+             src={plateData.image ? `data:image/jpeg;base64,${plateData.image}` : fallbackImage}
+              alt="License Plate"
+              className="logo-images"
+              id="plate-img"
+          />
         </div>
 
         <div className="info-box">
-          <h3>License plate character</h3>
+          <h3>License Plate Character</h3>
           <div className="plate-info">
-            {plateData.plate || "No plate detected"}
+            {plateData.plate || 'No plate detected'}
+          </div>
+          <div className="timestamp-info">
+            {plateData.timestamp || 'No timestamp available'}
           </div>
         </div>
+
         <div className="info-box">
           <h3>Helmet Detected</h3>
           <div className="helmet-info">
-            {/* Helmet detection info will go here */}
+            {/* Insert helmet detection data here */}
           </div>
         </div>
 
         <div className="info-box">
           <h3>No Helmet</h3>
           <div className="no-helmet-info">
-            {/* No helmet info will go here */}
+            {/* Insert no-helmet detection data here */}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
