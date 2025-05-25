@@ -14,7 +14,7 @@ function LivePage() {
         <div className="live-header">Live Monitor</div>
         <div className="video-container">
           <img
-            src="https://thumb.photo-ac.com/9f/9fdb5d142ef667cf9d32735308eb281e_t.jpeg"
+            src="https://allowing-secretly-mantis.ngrok-free.app/video_feed"
             alt="live"
             className="video-frame"
           />
