@@ -27,8 +27,8 @@ const Navbar = () => {
       if (result.isConfirmed) {
         logout();
         Swal.fire({
-          title: 'ออกจากระบบสำเร็จ',
-          text: 'คุณได้ออกจากระบบแล้ว',
+          title: 'Log out successfully',
+          text: 'You have logged out.',
           icon: 'success',
           timer: 1500,
           showConfirmButton: false

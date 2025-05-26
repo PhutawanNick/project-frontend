@@ -4,6 +4,7 @@ import { useAuth } from '../../context/auth';
 import Swal from 'sweetalert2';
 import './HomeStyle.css';
 import defaultAvatar from '../../assets/images/chisanucha.png'; // สร้างไฟล์ default avatar
+import { FaUser, FaLock } from 'react-icons/fa';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ function HomePage() {
 
       await Swal.fire({
         icon: 'success',
-        title: 'เข้าสู่ระบบสำเร็จ',
+        title: 'Login successful',
         timer: 1500,
         showConfirmButton: false
       });
@@ -50,8 +51,8 @@ function HomePage() {
     } else {
       Swal.fire({
         icon: 'error',
-        title: 'เข้าสู่ระบบไม่สำเร็จ',
-        text: 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง'
+        title: 'Login failed',
+        text: 'Username or password is incorrect'
       });
     }
   };
@@ -63,6 +64,7 @@ function HomePage() {
         
         <form onSubmit={handleSubmit}>
           <div className="form-group">
+            <FaUser className="form-icon" />
             <input
               type="text"
               name="username"
@@ -74,7 +76,8 @@ function HomePage() {
           </div>
           
           <div className="form-group">
-            <input
+            <FaLock className="form-icon" />
+            <input 
               type="password"
               name="password"
               value={formData.password}
