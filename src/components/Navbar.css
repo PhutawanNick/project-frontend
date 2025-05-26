@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     height: 60px;
-    background-color: #0d81ed;
+  background: linear-gradient(135deg, #0099ff 0%, #0043ff 100%);
     color: white;
     display: flex;
     justify-content: space-between;

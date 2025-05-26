@@ -10,7 +10,7 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: #0d81ed;
+    background: linear-gradient(135deg, #0099ff 0%, #0043ff 100%);
   border: none;
   color: white;
   font-size: 24px;
@@ -44,7 +44,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #0d81ed;
+    background: linear-gradient(135deg, #0099ff 0%, #0043ff 100%);
   color: white;
   display: flex;
   align-items: center;

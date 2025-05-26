@@ -7,7 +7,7 @@
     padding-left: 68px;             /* เพิ่ม padding-left เพื่อให้ไม่ทับกับ Sidebar */
     margin-top: 50px;               /* เพิ่ม margin-top เพื่อเว้นพื้นที่ใต้ Navbar */
     margin-right: 0; /* ลบ margin-right ที่เป็นลบออก */
-    background-color: #34495e;
+      background: linear-gradient(135deg, #3c5267 0%, #28355a 50%, #15244c 100%); 
     max-width: 100vw; /* จำกัดความกว้างไม่ให้เกินหน้าจอ */
     overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
 }
