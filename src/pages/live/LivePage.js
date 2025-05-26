@@ -43,7 +43,7 @@ function LivePage() {
         <div className="live-header">Live Monitor</div>
         <div className="video-container">
           <img
-            src="https://allowing-secretly-mantis.ngrok-free.app/video_feed"
+            src="http://localhost:8000/video_feed"
             alt="live"
             className="video-frame"
           />
