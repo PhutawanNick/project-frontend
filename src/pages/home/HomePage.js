@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/auth';
 import Swal from 'sweetalert2';
 import './HomeStyle.css';
-import defaultAvatar from '../../assets/images/chisanucha.png'; // สร้างไฟล์ default avatar
-import { FaUser, FaLock } from 'react-icons/fa';
+// import { FaUser, FaLock } from 'react-icons/fa';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -58,45 +57,48 @@ function HomePage() {
   };
 
   return (
-    <div className="home-container">
-      <div className="login-box">
-        <img src={defaultAvatar} alt="User Avatar" className="user-avatar" />
-        
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <FaUser className="form-icon" />
-            <input
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={handleInputChange}
-              placeholder="Username"
-              required
-            />
+    <body>
+      <div class="container"id="container">
+        <div class="form-container admin">
+          <form onSubmit={handleSubmit}>
+            <h1>Admin</h1>
+            <span>Plase Form Username and password for Admin</span>
+            <input name="username" type="text" placeholder='UserName'value={formData.username}onChange={handleInputChange}required></input>
+            <input name="password" type="password" placeholder='Password'value={formData.password}onChange={handleInputChange}required></input>
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        </div>
+        <div class="form-container office">
+          <form onSubmit={handleSubmit}>
+            <h1>Office</h1>
+            <span>Plase Form Username and password for Office</span>
+            <input name="username" type="text" placeholder='UserName'value={formData.username}onChange={handleInputChange}required></input>
+            <input name="password" type="password" placeholder='Password'value={formData.password}onChange={handleInputChange}required></input>
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        </div>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Welcome Admin</h1>
+              <p>Enter your details to Admin</p>
+              <button class="hidden" id="login">Welcome
+              </button>
+            </div>
           </div>
-          
-          <div className="form-group">
-            <FaLock className="form-icon" />
-            <input 
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              placeholder="Password"
-              required
-            />
+        </div>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-right">
+              <h1>Welcome Office</h1>
+              <p>Enter your details to Office</p>
+              <button class="hidden" id="register">Welcome
+              </button>
+            </div>
           </div>
-
-          <button type="submit" className="login-button">
-            Login
-          </button>
-        </form>
-
-        {/* <a href="#" className="forgot-password">
-          Forgot Username / Password?
-        </a> */}
+        </div>
       </div>
-    </div>
+    </body>
   );
 }
 
