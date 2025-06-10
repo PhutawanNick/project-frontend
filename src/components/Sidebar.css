@@ -2,7 +2,7 @@
 .floating-menu {
   position: fixed;
   top: 70px;  /* เปลี่ยนเป็น 90px เพื่อให้อยู่ใต้ Navbar ที่มีความสูง 80px + margin 10px */
-  left: 15px;
+  left: 7px;
   z-index: 998;  /* ลดค่า z-index ให้น้อยกว่า Navbar (999) */
 }
 
@@ -10,7 +10,7 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-    background: linear-gradient(135deg, #0099ff 0%, #0043ff 100%);
+  background: #193ea5;
   border: none;
   color: white;
   font-size: 24px;
@@ -30,7 +30,7 @@
 .menu-items {
   position: absolute;
   top: 55px;  
-  left: 0;
+  left: 2px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -44,7 +44,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-    background: linear-gradient(135deg, #0099ff 0%, #0043ff 100%);
+    background: #193ea5;
   color: white;
   display: flex;
   align-items: center;

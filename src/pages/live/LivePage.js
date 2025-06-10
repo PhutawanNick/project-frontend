@@ -40,7 +40,6 @@ function LivePage() {
   return (
     <div className="live-container">
       <div className="video-section">
-        <div className="live-header">Live Monitor</div>
         <div className="video-container">
           <img
             src="http://localhost:8000/video_feed"
@@ -71,7 +70,6 @@ function LivePage() {
             />
           )}
         </div>
-
         <div className="info-box">
           <h3>License Plate Character</h3>
           <div className="plate-info">
