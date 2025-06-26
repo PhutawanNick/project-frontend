@@ -2,7 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/auth';
 import Swal from 'sweetalert2';
-import logo from '../assets/images/ms-icon-48x48.png';
+// import logo from '../assets/images/ms-icon-48x48.png';
+import logo from '../assets/images/helmet-icons.png';
 import './Navbar.css';
 
 /**
@@ -44,7 +45,7 @@ const Navbar = () => {
     <header className="header">
       {/* ส่วนแสดงโลโก้ด้านซ้าย */}
       <div className="logo">
-        <img src={logo} alt="Logo" className="logo-image" />
+        {/* <img src={logo} alt="Logo" className="logo-image" /> */}
         <h1>Helmet & Rider Detection System</h1>
       </div>
       
